@@ -1,7 +1,7 @@
 Sparky XTerm
 Sparky XTerm provides simply configuration scripts which choose right x-terminal-emulator for Sparky applications
 
-Copyright (C) 2015-2016 Paweł Pijanowski and others, see copyright file.
+Copyright (C) 2015-2018 Paweł Pijanowski and others, see copyright file.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -18,7 +18,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 Dependencies:
 -------------
-xterm
+xterm | tilda
 
 Install:
 -------------

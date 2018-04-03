@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# This script choose and run right terminal emulator
+# for Sparky applications
+# Created by Paweł "pavroo' Pijanowski 2015/02/28
+# Copyright 2015-2018 under the GNU GPL2 License
+# Last update 2018/03/28
+
+TESTTILDA=`which tilda`
+TESTXTERM=`which xterm`
+
+if [ "$TESTTILDA" != "" ]; then
+	$TESTTILDA -g /opt/sparky/sparky-xterm -c "$@"
+
+elif [ "$TESTXTERM" != "" ]; then
+	$TESTXTERM -e "$@"
+
+else
+
+	x-terminal-emulator -e "$@"
+
+fi
+
+exit 0

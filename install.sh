@@ -16,7 +16,7 @@
 
 if [ "$1" = "uninstall" ]; then
 	rm -f /opt/sparky/sparky-xterm
-	rm -f /usr/bin/sparky-terminal
+	rm -f /usr/bin/sparky-xterm
 else
 	if [ ! -d /opt/sparky ]; then
 		mkdir -p /opt/sparky
