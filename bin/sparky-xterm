@@ -4,13 +4,18 @@
 # for Sparky applications
 # Created by Paweł "pavroo' Pijanowski 2015/02/28
 # Copyright 2015-2018 under the GNU GPL2 License
-# Last update 2018/03/28
+# Last update 2018/04/07
 
 TESTTILDA=`which tilda`
+TILDAVER=`dpkg-query -l | grep tilda | grep 1.4`
 TESTXTERM=`which xterm`
 
 if [ "$TESTTILDA" != "" ]; then
-	$TESTTILDA -g /opt/sparky/sparky-xterm -c "$@"
+	if [ "$TILDAVER" = "" ]; then
+		$TESTTILDA -c "$@"
+	elif [ "$TILDAVER" != "" ]; then
+		$TESTTILDA -g /opt/sparky/sparky-xterm -c "$@"
+	fi
 
 elif [ "$TESTXTERM" != "" ]; then
 	$TESTXTERM -e "$@"
