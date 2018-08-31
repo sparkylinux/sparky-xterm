@@ -4,13 +4,17 @@
 # for Sparky applications
 # Created by Paweł "pavroo' Pijanowski 2015/02/28
 # Copyright 2015-2018 under the GNU GPL2 License
-# Last update 2018/04/14
+# Last update 2018/08/31
 
+TESTURXVT=`which urxvt`
 TESTTILDA=`which tilda`
 TILDAVER=`dpkg-query -l | grep tilda | grep 1.3`
 TESTXTERM=`which xterm`
 
-if [ "$TESTTILDA" != "" ]; then
+if [ "$TESTURXVT" != "" ]; then
+	 $TESTURXVT +si -fn "xft:DejaVu Sans Mono:size=9" +sr -cr white -tr -sh 30 +sb -pe default -bg white -rv -blr 10x10 -e $@
+
+elif [ "$TESTTILDA" != "" ]; then
 	if [ "$TILDAVER" != "" ]; then
 		$TESTTILDA -c "$@"
 	elif [ "$TILDAVER" = "" ]; then
