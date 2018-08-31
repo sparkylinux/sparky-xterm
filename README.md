@@ -18,7 +18,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 Dependencies:
 -------------
-xterm | tilda
+coreutils
+dpkg
+grep
+xterm | rxvt-unicode | tilda
 
 Install:
 -------------
