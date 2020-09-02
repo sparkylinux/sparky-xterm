@@ -21,7 +21,7 @@ Dependencies:
 coreutils
 dpkg
 grep
-spterm | xterm | rxvt-unicode | tilda
+spterm | xterm | rxvt-unicode
 
 Install:
 -------------
